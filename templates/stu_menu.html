@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .center {
+            text-align:center;
+        }
+    </style>
+    <script>
+        function f(){
+            alert("测试");
+        }
+    </script>
+</head>
+<body>
+    <div class="center">
+    <h1>{{name}},欢迎来到你的学生主页</h1>
+    <hr>
+    <p>课程信息</p>
+    <form action="/to_show_course" method="POST">
+        <input type="hidden" name="id" value={{id}}>
+        <input type="hidden" name="pwd" value={{pwd}}>
+        <input type="submit" value="查看我的所有课程">
+    </form><br>
+
+    <form action="/to_add_course" method="POST">
+        <input type="hidden" name="id" value={{id}}>
+        <input type="hidden" name="pwd" value={{pwd}}>
+        <input type="submit" value="添加课程">
+    </form><br>
+
+        <form action="/to_delete_course" method="POST">
+        <input type="hidden" name="id" value={{id}}>
+        <input type="hidden" name="pwd" value={{pwd}}>
+        <input type="submit" value="删除课程">
+    </form><br>
+    </div>
+</body>
+</html>

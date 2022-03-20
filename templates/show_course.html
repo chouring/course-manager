@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: 30px solid lightslategray;
+        }
+        tr, td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function func(arr) {
+            let html = "<table >";
+            html += "<tr><td>" + "课程id" + "</td><td>" + "课程名称" + "</td><td>"  +
+                    "上课时间" + "</td><td>"  + "下课时间" + "</td></tr>";
+            for (let i = 0; i < arr.length; i++) {
+                html += "<tr><td>" + arr[i].course_id + "</td><td>" + arr[i].course_name + "</td><td>"  +
+                    arr[i].begin_time + "</td><td>"  + arr[i].end_time + "</td></tr>";
+            }
+            html += "</table>";
+            document.getElementById("out").innerHTML = html;
+        }
+    </script>
+    <input type="button" value="点击获取" onclick="func({{ array }})">
+    <p id="out"></p>
+</body>
+</html>

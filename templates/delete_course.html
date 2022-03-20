@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .center {
+            text-align:center;
+        }
+    </style>
+    <script>
+        function f(flag) {
+            if (flag) {
+                document.getElementById('out').innerHTML = "删除成功";
+            }
+            else {
+                document.getElementById('out').innerHTML = "删除失败，未找到该课程，请核对课程id和课程名称";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="center">
+    <form action="/delete_course" method="POST">
+        <input type="hidden" name="id" value={{id}}>
+        <input type="hidden" name="pwd" value={{pwd}}>
+        课程id<input type="text" name="course_id"><br><br>
+        课程名字<input type="text" name="course_name"><br><br>
+        <input type="submit" value="点击删除">
+    </form>
+    </div>
+</body>
+</html>
