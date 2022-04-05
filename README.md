@@ -14,3 +14,5 @@ Python flask。
 
 ## 数据库
 无，一个txt文件每行存取一个json/dict格式的字符串，三者通过json包相互转换。
+
+简单demo而已
